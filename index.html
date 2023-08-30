@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Single price grid component</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/reset.css">
@@ -12,7 +17,33 @@
 </head>
 <body>
 
+  <main class="price-grid">
+    <div class="price-grid__info">
+      <h1 class="price-grid__title">Join our community</h1>
+      <p class="price-grid__lead">30-day, hassle-free money back guarantee</p>
+      <p class="price-grid__text">Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+    </div>
 
+    <section class="price-grid__subscription-box">
+      <h2 class="price-grid__plan-heading">Monthly Subscription</h2>
+      <p class="price-grid__price-wrapper"><strong class="price-grid__price">$29</strong> per month</p>
+      <p class="price-grid__plan-info">Full access for less than $1 a day</p>
+      <a class="price-grid__link" href="#">Sign Up</a>
+    </section>
+
+    <section class="price-grid__features">
+      <h2 class="price-grid__plan-heading">Why Us</h2>
+      <ul class="price-grid__features-list" role="list">
+        <li class="price-grid__features-item" role="listitem">Tutorials by industry experts</li>
+        <li class="price-grid__features-item" role="listitem">Peer & expert code review</li>
+        <li class="price-grid__features-item" role="listitem">Coding exercises</li>
+        <li class="price-grid__features-item" role="listitem">Access to our GitHub repos</li>
+        <li class="price-grid__features-item" role="listitem">Community forum</li>
+        <li class="price-grid__features-item" role="listitem">Flashcard decks</li>
+        <li class="price-grid__features-item" role="listitem">New videos every week</li>
+      </ul>
+    </section>
+  </main>
 
   <script src="js/main.js"></script>
 </body>

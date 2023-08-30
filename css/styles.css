@@ -1,14 +1,21 @@
+/* CUSTOM PROPS */
+:root {
+  --card-padding: 24px;
+}
+
+
 /* GLOBAL */
 body {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 32px;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  font-family: "Karla", "Arial", sans-serif;
+  font-size: 0.875rem;
+  line-height: 185.714%;
+  letter-spacing: -0.01094em;
+  background-color: #e6eff5;
+  color: #9aa7be;
 }
 
 img {
@@ -71,6 +78,117 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
 }
 
+
+/* PRICE-GRID */
+.price-grid {
+  flex-shrink: 0;
+  max-width: 39.6875rem;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
+}
+
+.price-grid__info {
+  padding: 28px var(--card-padding) 32px;
+}
+
+.price-grid__title {
+  margin-bottom: 24px;
+  font-size: 1.25rem;
+  line-height: normal;
+  letter-spacing: -0.01563em;
+  color: #2ab3b1;
+}
+
+.price-grid__lead {
+  margin-bottom: 16px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 133.333%;
+  letter-spacing: -0.01169em;
+  color: #c0df33;
+}
+
+.price-grid__subscription-box {
+  padding: var(--card-padding);
+  background-color: #2ab3b1;
+  color: #fff;
+}
+
+.price-grid__plan-heading {
+  margin-bottom: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.01406em;
+}
+
+.price-grid__price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.price-grid__price {
+  margin-bottom: 4px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+
+.price-grid__plan-info {
+  margin-bottom: 26px;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 162.5%;
+  letter-spacing: -0.0125em;
+}
+
+.price-grid__link {
+  display: block;
+  padding: 15px 15px 14px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.0125em;
+  text-align: center;
+  text-decoration: none;
+  background-color: #c0df33;
+  color: #fff;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+}
+
+.price-grid__link:hover {
+  opacity: 0.8;
+}
+
+.price-grid__link:active {
+  opacity: 0.6;
+}
+
+.price-grid__features {
+  padding: var(--card-padding);
+  background-color: #4bbfbc;
+  color: #fff;
+}
+
+.price-grid__features-list {
+  padding: 0;
+  font-family: Karla;
+  font-size: 0.875rem;
+  line-height: 142.857%;
+  letter-spacing: -0.01094em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -79,4 +197,39 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+}
+
+
+/* 640 */
+@media only screen and (min-width: 40em) {
+  :root {
+    --card-padding: 40px;
+  }
+
+  body {
+    font-size: 1rem;
+    letter-spacing: -0.01094em;
+  }
+
+  .price-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .price-grid__info {
+    grid-column: 1 / -1;
+    padding: var(--card-padding);
+  }
+
+  .price-grid__title {
+    font-size: 1.5rem;
+    letter-spacing: -0.01875rem;
+  }
+
+  .price-grid__lead {
+    margin-bottom: 11px;
+    font-size: 1.125rem;
+    line-height: normal;
+    letter-spacing: -0.01406em;
+  }
 }
